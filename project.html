@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartphone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    header a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+    }
+    main {
+      text-align: center;
+      margin: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" id="Home">Home</a>
+    <a href="#" id="contact">Contact</a>
+    <a href="#" id="Orders">Orders</a>
+  </header>
+  <main>
+    <h1>Smartphone</h1>
+    <img src="phn.jpg" alt="Smartphone Image" width="300">
+    <h2>Specifications</h2>
+    <ul>
+      <li>
+        <strong>Design & Display:</strong> <br>
+        Display: 6.7-inch Super Retina XDR OLED, HDR10, Dolby Vision <br>
+        Resolution: 2796 x 1290 pixels (~460 ppi density) <br>
+        Material: Ceramic Shield front cover, textured matte glass back, stainless steel frame <br>
+        Colors: Graphite, Gold, Silver, Blue <br>
+      </li>
+      <li>
+        <strong>Performance:</strong> <br>
+        Chipset: A17 Pro chip (Hexa-core, 3.70 GHz) <br>
+        GPU: Apple-designed 6-core GPU <br>
+        RAM: 8GB <br>
+        Storage Options: 128GB, 256GB, 512GB, 1TB <br>
+      </li>
+    </ul>
+
+    <!-- Add to Cart and Wishlist buttons -->
+    <button id="addCart">Add to Cart</button>
+    <button id="addWishlist">Add to Wishlist</button>
+    
+    <p id="message"></p> <!-- Message placeholder -->
+  </main>
+
+  <footer>
+    &copy; All rights reserved
+  </footer>
+
+  <script>
+    // Get references to the buttons and the message placeholder
+    const addCartButton = document.getElementById("addCart");
+    const addWishlistButton = document.getElementById("addWishlist");
+    const messageElement = document.getElementById("message");
+
+    // Function to handle Add to Cart click
+    addCartButton.addEventListener("click", () => {
+      messageElement.textContent = "Added to cart!";
+      messageElement.style.color = "green";
+    });
+
+    // Function to handle Add to Wishlist click
+    addWishlistButton.addEventListener("click", () => {
+      messageElement.textContent = "Added to wishlist!";
+      messageElement.style.color = "blue";
+    });
+  </script>
+</body>
+</html>
